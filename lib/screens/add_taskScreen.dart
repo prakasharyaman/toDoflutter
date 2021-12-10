@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todoey_flutter/main.dart';
@@ -25,7 +23,7 @@ class AddTaskScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Text(
-              'Add Task',
+              'Add a Task',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.lightBlueAccent,
@@ -46,10 +44,9 @@ class AddTaskScreen extends StatelessWidget {
             ),
             FlatButton(
               onPressed: () {
-                Provider.of<TasksData>(context,listen: false)
+                Provider.of<TasksData>(context, listen: false)
                     .addTask(newTaskTitle);
                 Navigator.pop(context);
-
               },
               color: Colors.lightBlueAccent,
               child: Text(
